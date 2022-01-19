@@ -360,7 +360,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_policy-graphql
+  action_policy-graphql (= 0.5.2)
   aws-sdk-s3
   bcrypt
   bootsnap

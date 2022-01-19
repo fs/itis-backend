@@ -7,7 +7,7 @@ gem "pg"
 gem "rails", "~> 6.0.4.2"
 
 # all other gems
-gem "action_policy-graphql"
+gem "action_policy-graphql", "0.5.2"
 gem "aws-sdk-s3"
 gem "bcrypt"
 gem "bootsnap", require: false
