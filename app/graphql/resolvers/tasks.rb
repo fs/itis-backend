@@ -6,6 +6,8 @@ module Resolvers
 
     type [Types::TaskType], null: false
 
+    delegate :projects, to: :current_user
+
     private
 
     def fetch_data
@@ -13,7 +15,7 @@ module Resolvers
     end
 
     def raw_relation
-      Task.all
+      Task.where(project: projects)
     end
   end
 end
