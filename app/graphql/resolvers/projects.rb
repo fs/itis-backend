@@ -13,7 +13,7 @@ module Resolvers
     end
 
     def raw_relation
-      Project.all
+      object.projects
     end
   end
 end
