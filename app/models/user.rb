@@ -7,11 +7,11 @@ class User < ApplicationRecord
   has_and_belongs_to_many :projects, dependent: :destroy
 
   has_many :created_tasks, inverse_of: :creator, class_name: "Task",
-    foreign_key: :creator_id, dependent: :destroy
+                           foreign_key: :creator_id, dependent: :destroy
   has_many :created_projects, inverse_of: :creator, class_name: "Project",
-    foreign_key: :creator_id, dependent: :destroy
+                              foreign_key: :creator_id, dependent: :destroy
   has_many :created_comments, inverse_of: :creator, class_name: "Comment",
-    foreign_key: :creator_id, dependent: :destroy
+                              foreign_key: :creator_id, dependent: :destroy
 
   has_many :activities, dependent: :destroy
   has_many :refresh_tokens, dependent: :destroy
