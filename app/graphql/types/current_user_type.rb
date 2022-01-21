@@ -6,6 +6,7 @@ module Types
     field :last_name, String, null: true
     field :avatar_url, String, null: true
     field :confirmed_at, GraphQL::Types::ISO8601DateTime, null: true
+    field :projects, resolver: Resolvers::Projects
 
     field :activities, resolver: Resolvers::Activities, connection: true
 
